@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ИБП — Источники бесперебойного питания</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;color:#122b4b;background:#fff}
+header{background:#062b61;color:white;padding:20px 6%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:15px}
+.logo{font-size:34px;font-weight:900;letter-spacing:2px}
+nav{display:flex;gap:20px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none}
+.hero{background:linear-gradient(120deg,#052758,#0756b9);color:white;padding:90px 7%;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-100px;top:-100px;width:45%;height:140%;border:50px solid #ffffff12;transform:rotate(30deg);pointer-events:none}
+.hero h1{font-size:clamp(38px,6vw,68px);max-width:850px;margin:20px 0}
+.hero p{font-size:19px;max-width:620px;line-height:1.6}
+.eyebrow{color:#77c4ff;font-weight:bold;letter-spacing:2px}
+.btn{display:inline-block;background:#1685ef;color:white;padding:15px 25px;border-radius:6px;text-decoration:none;font-weight:bold;margin:12px 10px 0 0}
+.btn:hover{background:#0065cc}
+.btn.white{background:white;color:#064080}
+section{padding:65px 7%}
+h2{font-size:clamp(28px,4vw,40px);margin:10px 0 25px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.card{border:1px solid #dce6f2;border-radius:12px;padding:28px;box-shadow:0 8px 25px #0a32600d}
+.card h3{font-size:22px;color:#064080}
+.card p{color:#53657b;line-height:1.6;min-height:70px}
+.symbol{font-size:35px;color:#137be1}
+.features{background:#edf5ff}
+.features p{line-height:1.7}
+.cta{background:#063875;color:white;text-align:center}
+.cta p{color:#e2efff}
+footer{background:#061d3c;color:#cbd9eb;padding:35px 7%;line-height:1.8}
+footer a{color:#9ed0ff}
+@media(max-width:600px){header{align-items:flex-start}.hero{padding:65px 7%}nav{gap:12px}section{padding:45px 6%}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">ИБП</div>
+<nav>
+<a href="index.html">Главная</a>
+<a href="#catalog">Каталог</a>
+<a href="#advantages">Преимущества</a>
+<a href="zayavka.html">Оставить заявку</a>
+</nav>
+</header>
+
+<div class="hero">
+<div class="eyebrow">НАДЁЖНОЕ ЭЛЕКТРОПИТАНИЕ</div>
+<h1>Источники бесперебойного питания</h1>
+<p>ИБП и аккумуляторные системы LiFePO4 для бизнеса, промышленности и критически важной инфраструктуры.</p>
+<a class="btn" href="#catalog">Каталог оборудования</a>
+<a class="btn white" href="zayavka.html">Получить предложение</a>
+</div>
+
+<section id="catalog">
+<div class="eyebrow">ОБОРУДОВАНИЕ</div>
+<h2>Каталог оборудования</h2>
+<p>Выберите категорию. Подбор конкретных моделей осуществляется по техническим требованиям заказчика.</p>
+<div class="grid">
+
+<div class="card">
+<div class="symbol">⚡</div>
+<h3>ИБП с аккумуляторными батареями</h3>
+<p>Комплексные решения резервного питания с необходимым временем автономной работы.</p>
+<a class="btn" href="zayavka.html?equipment=ups-with">Оставить заявку</a>
+</div>
+
+<div class="card">
+<div class="symbol">⚡</div>
+<h3>ИБП без АКБ</h3>
+<p>Источники бесперебойного питания для подключения внешних аккумуляторных систем.</p>
+<a class="btn" href="zayavka.html?equipment=ups-without">Оставить заявку</a>
+</div>
+
+<div class="card">
+<div class="symbol">▣</div>
+<h3>LiFePO4 АКБ 48В</h3>
+<p>Литий-железо-фосфатные аккумуляторные батареи для систем резервного питания.</p>
+<a class="btn" href="zayavka.html?equipment=lfp48">Оставить заявку</a>
+</div>
+
+<div class="card">
+<div class="symbol">▣</div>
+<h3>LiFePO4 АКБ 192В–240В</h3>
+<p>Высоковольтные аккумуляторные системы для совместимых источников питания.</p>
+<a class="btn" href="zayavka.html?equipment=lfp192">Оставить заявку</a>
+</div>
+
+<div class="card">
+<div class="symbol">▣</div>
+<h3>LiFePO4 АКБ 384В–614,4В</h3>
+<p>Высоковольтные аккумуляторные решения для промышленных систем ИБП.</p>
+<a class="btn" href="zayavka.html?equipment=lfp384">Оставить заявку</a>
+</div>
+
+</div>
+</section>
+
+<section class="features" id="advantages">
+<div class="eyebrow">НАШ ПОДХОД</div>
+<h2>Подбор оборудования под ваши задачи</h2>
+<div class="grid">
+<div>
+<h3>01. Анализ требований</h3>
+<p>Учитываем мощность, количество фаз, пусковые токи и особенности объекта.</p>
+</div>
+<div>
+<h3>02. Подбор конфигурации</h3>
+<p>Определяем подходящий тип ИБП, способ установки и аккумуляторную систему.</p>
+</div>
+<div>
+<h3>03. Коммерческое предложение</h3>
+<p>Подготавливаем предложение с учётом параметров и пожеланий заказчика.</p>
+</div>
+</div>
+</section>
+
+<section class="cta">
+<h2>Нужно подобрать ИБП?</h2>
+<p>Заполните заявку, указав технические параметры и контактные данные.</p>
+<a class="btn white" href="zayavka.html">Оставить заявку</a>
+</section>
+
+<footer>
+<strong>ИБП — Источники бесперебойного питания</strong>
+<p>Электронная почта: <a href="mailto:jekkasova96@yandex.ru">jekkasova96@yandex.ru</a></p>
+<p>© 2026 ИБП. Подбор оборудования по запросу.</p>
+</footer>
+</body>
+</html>
