@@ -199,16 +199,126 @@ footer a{color:#8bc9ff}
  .grid{grid-template-columns:1fr}
  .section{padding:60px 0}
  .visual{transform:scale(.82);margin:-25px 0}
+.logo {
+  font-size: 23px;
+  letter-spacing: 0;
+  line-height: 1.25;
+  max-width: 340px;
 }
+
+.logo small {
+  margin-top: 6px;
+  font-size: 9px;
+  letter-spacing: 1.2px;
+}
+
+.hero {
+  min-height: 680px;
+  position: relative;
+  overflow: hidden;
+  background: #031b40;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(2,18,43,.94) 0%,
+    rgba(3,35,77,.75) 55%,
+    rgba(3,36,80,.35) 100%
+  );
+  z-index: 1;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-inner > div:first-child {
+  max-width: 850px;
+}
+
+@media(max-width:600px) {
+  .logo { font-size: 19px; }
+  .hero { min-height: 620px; }
+  .hero-overlay {
+    background: rgba(2,22,49,.78);
+  }
+}
+
+
+Замените содержимое первого экрана
+Найдите в коде весь блок от <section class="hero"> до соответствующего </section> и замените его следующим:
+<section class="hero">
+
+  <video
+    class="hero-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata"
+    aria-hidden="true"
+  >
+    <source src="industrial.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-overlay"></div>
+
+  <div class="container hero-inner">
+    <div>
+      <div class="kicker">
+        ПРОМЫШЛЕННЫЕ СИСТЕМЫ БЕСПЕРЕБОЙНОГО ПИТАНИЯ
+      </div>
+
+      <h1>
+        НАДЁЖНОЕ ЭЛЕКТРОПИТАНИЕ
+        <span>КРИТИЧЕСКИ ВАЖНЫХ ОБЪЕКТОВ</span>
+      </h1>
+
+      <p>
+        Источники бесперебойного питания и
+        аккумуляторные системы LiFePO4
+        для промышленных предприятий,
+        нефтегазовой отрасли,
+        центров обработки данных
+        и транспортной инфраструктуры.
+      </p>
+
+      <div class="actions">
+        <a class="btn" href="#catalog">
+          Каталог оборудования →
+        </a>
+
+        <a class="btn outline" href="zayavka.html">
+          Получить предложение
+        </a>
+      </div>
+    </div>
+  </div>
+
+</section>
 </style>
 </head>
 <body>
 
 <header>
  <div class="container navbar">
-  <a class="logo" href="index.html">ИБП
-   <small>ИНЖЕНЕРНЫЕ РЕШЕНИЯ</small>
-  </a>
+  <a class="logo" href="index.html">
+ Системы бесперебойного питания
+ <small>НАДЁЖНОЕ ЭЛЕКТРОПИТАНИЕ ПРОМЫШЛЕННЫХ ОБЪЕКТОВ</small>
+</a>
   <nav>
    <a href="#catalog">Оборудование</a>
    <a href="#advantages">Преимущества</a>
