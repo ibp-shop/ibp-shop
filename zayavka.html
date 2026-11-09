@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Оставить заявку — ИБП</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#edf4fc;color:#173454}
+header{background:#062b61;color:white;padding:22px 7%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:32px;font-weight:900}
+header a{color:white;text-decoration:none}
+main{max-width:780px;margin:40px auto;padding:0 18px}
+.intro{background:linear-gradient(120deg,#062b61,#0864c5);color:white;padding:35px;border-radius:12px 12px 0 0}
+.intro h1{font-size:32px;margin:10px 0}
+.intro p{line-height:1.6}
+form{background:white;padding:32px;border-radius:0 0 12px 12px;box-shadow:0 8px 30px #10396b15}
+h2{font-size:22px;color:#064080;margin:15px 0 22px}
+label{display:block;font-weight:bold;margin:17px 0 7px}
+input,select,textarea{width:100%;padding:13px;border:1px solid #c8d5e5;border-radius:6px;font:inherit;background:white}
+input:focus,select:focus,textarea:focus{outline:2px solid #2787e9}
+fieldset{border:1px solid #dce6f1;border-radius:8px;padding:18px;margin:22px 0;background:#f7faff}
+legend{font-weight:bold;color:#064080;padding:0 8px}
+fieldset label{font-weight:normal;margin:10px 0}
+fieldset input[type=radio]{width:auto;margin-right:8px}
+button{width:100%;background:#0876df;color:white;border:0;padding:17px;font-size:17px;font-weight:bold;border-radius:6px;cursor:pointer;margin-top:20px}
+button:hover{background:#0059b5}
+small{color:#5e6f84}
+.hidden{display:none}
+.note{padding:13px;background:#eaf4ff;border-radius:6px;color:#174c83}
+@media(max-width:600px){form{padding:22px}.intro{padding:25px}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">ИБП</div>
+<a href="index.html">← На главную</a>
+</header>
+<main>
+<div class="intro">
+<h1>Получить коммерческое предложение</h1>
+<p>Укажите необходимое оборудование и технические параметры. Мы рассмотрим ваш запрос и свяжемся с вами.</p>
+</div>
+
+<form id="requestForm">
+<h2>1. Интересующее оборудование</h2>
+
+<label for="equipment">Категория оборудования *</label>
+<select id="equipment" name="equipment" required>
+<option value="ups-with">ИБП с аккумуляторными батареями</option>
+<option value="ups-without">ИБП без АКБ</option>
+<option value="lfp48">LiFePO4 АКБ 48В</option>
+<option value="lfp192">LiFePO4 АКБ 192В–240В</option>
+<option value="lfp384">LiFePO4 АКБ 384В–614,4В</option>
+</select>
+
+<div id="upsFields">
+<label for="power">Мощность, кВА *</label>
+<input id="power" name="power" type="number" min="0.1" step="any" placeholder="Например, 100">
+
+<div id="runtimeField">
+<label for="runtime">Время автономной работы, мин *</label>
+<input id="runtime" name="runtime" type="number" min="1" step="1" placeholder="Например, 30">
+</div>
+
+<label for="phases">Количество фаз *</label>
+<select id="phases" name="phases">
+<option value="1/1">1 фаза / 1 фаза</option>
+<option value="3/1">3 фазы / 1 фаза</option>
+<option value="3/3">3 фазы / 3 фазы</option>
+</select>
+
+<fieldset>
+<legend>Наличие пусковых токов *</legend>
+<label><input type="radio" name="starting" value="Да" required> Да</label>
+<label><input type="radio" name="starting" value="Нет"> Нет</label>
+<label><input type="radio" name="starting" value="Не знаю"> Не знаю, нужна консультация</label>
+</fieldset>
+
+<fieldset>
+<legend>Топология (способ установки) *</legend>
+<label><input type="radio" name="mount" value="Напольная" required> Напольная установка</label>
+<label><input type="radio" name="mount" value="В стойку"> Установка в стойку</label>
+</fieldset>
+</div>
+
+<label for="notes">Примечания</label>
+<textarea id="notes" name="notes" rows="4" placeholder="Дополнительные требования, пожелания, особенности объекта"></textarea>
+
+<h2>2. Контактные данные</h2>
+
+<label for="fio">ФИО *</label>
+<input id="fio" name="fio" required autocomplete="name" placeholder="Иванов Иван Иванович">
+
+<label for="inn">ИНН компании *</label>
+<input id="inn" name="inn" required inputmode="numeric" pattern="[0-9]{10}|[0-9]{12}" title="Введите 10 или 12 цифр" placeholder="10 или 12 цифр">
+
+<label for="phone">Контактный телефон *</label>
+<input id="phone" name="phone" type="tel" required minlength="10" placeholder="+7 (999) 123-45-67">
+
+<label for="email">Электронная почта *</label>
+<input id="email" name="email" type="email" required placeholder="example@company.ru">
+
+<p class="note">Поля со звёздочкой обязательны для заполнения.</p>
+
+<button type="submit">Оставить заявку</button>
+<p><small id="status">Тестовая версия: отправка на почту будет подключена после настройки сервера.</small></p>
+</form>
+</main>
+
+<script>
+const equipment=document.getElementById("equipment");
+const upsFields=document.getElementById("upsFields");
+const runtimeField=document.getElementById("runtimeField");
+const power=document.getElementById("power");
+const runtime=document.getElementById("runtime");
+
+function updateFields(){
+  const ups=equipment.value.startsWith("ups-");
+  const withBattery=equipment.value==="ups-with";
+  upsFields.classList.toggle("hidden",!ups);
+  runtimeField.classList.toggle("hidden",!withBattery);
+  power.required=ups;
+  runtime.required=withBattery;
+  upsFields.querySelectorAll("select, input[type=radio]").forEach(el=>{
+    el.disabled=!ups;
+  });
+  power.disabled=!ups;
+  runtime.disabled=!withBattery;
+}
+
+const selected=new URLSearchParams(location.search).get("equipment");
+if([...equipment.options].some(o=>o.value===selected)){
+  equipment.value=selected;
+}
+equipment.addEventListener("change",updateFields);
+updateFields();
+
+document.getElementById("requestForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  document.getElementById("status").textContent=
+    "Форма заполнена. Это тестовая версия: заявка пока не отправлена.";
+  alert("Форма проверена. Отправка заявок будет подключена после публикации сайта.");
+});
+</script>
+</body>
+</html>
