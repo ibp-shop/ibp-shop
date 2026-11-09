@@ -3,220 +3,131 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Промышленные ИБП и аккумуляторные батареи LiFePO4. Подбор решений бесперебойного питания для предприятий.">
-<title>ИБП — Промышленные источники бесперебойного питания</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Системы бесперебойного питания для промышленных объектов. ИБП и аккумуляторные системы LiFePO4.">
+<title>Системы бесперебойного питания — ИБП</title>
+
 <style>
-:root{
- --navy:#031b40;
- --blue:#06499b;
- --bright:#087cf4;
- --cyan:#50baff;
- --ink:#102949;
- --muted:#60748d;
- --light:#eff5fc;
+:root {
+  --navy: #031a3b;
+  --blue: #064a9d;
+  --bright: #087df2;
+  --cyan: #69c5ff;
+  --ink: #102b4b;
+  --muted: #64758c;
+  --light: #eff5fc;
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:white}
-a{text-decoration:none}
-.container{width:min(1200px,90%);margin:auto}
-header{
- position:sticky;top:0;z-index:50;
- background:#031c43f5;color:white;
- border-bottom:1px solid #ffffff24;
- backdrop-filter:blur(12px)
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: white;
+  color: var(--ink);
 }
-.navbar{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.logo{font-size:34px;font-weight:900;letter-spacing:2px;color:white}
-.logo small{display:block;font-size:9px;letter-spacing:2px;font-weight:normal;color:#9bcaff}
-nav{display:flex;gap:25px;align-items:center;flex-wrap:wrap}
-nav a{color:#dcecff;font-size:14px}
-nav a:hover{color:var(--cyan)}
-.btn{
- display:inline-flex;align-items:center;justify-content:center;
- padding:15px 23px;border-radius:7px;
- background:var(--bright);color:white;font-weight:800;
- font-size:14px;transition:.2s;border:1px solid transparent
+
+a { text-decoration: none; }
+
+.container {
+  width: min(1200px, 90%);
+  margin: auto;
 }
-.btn:hover{background:#0064d0;transform:translateY(-2px)}
-.btn.outline{background:transparent;border-color:#8bbfff;color:white}
-.btn.white{background:white;color:#064b9b}
-.btn.small{padding:11px 16px}
-.hero{
- position:relative;overflow:hidden;
- background:linear-gradient(118deg,#031936 5%,#06458f 67%,#0879e7);
- color:white;min-height:650px;display:flex;align-items:center
+
+/* ШАПКА */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #031b40f5;
+  border-bottom: 1px solid #ffffff22;
+  backdrop-filter: blur(12px);
 }
-.hero:before{
- content:"";position:absolute;inset:0;
- background:repeating-linear-gradient(117deg,transparent 0 120px,#ffffff07 121px 180px,transparent 181px 260px)
+
+.navbar {
+  min-height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
 }
-.hero:after{
- content:"";position:absolute;right:-180px;top:-130px;
- width:580px;height:900px;transform:rotate(27deg);
- background:linear-gradient(90deg,#ffffff08,#00a6ff2e,#ffffff08);
- border-left:2px solid #ffffff1a
-}
-.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:30px;padding:95px 0}
-.kicker{color:#6fc7ff;font-size:13px;letter-spacing:2.5px;font-weight:900;text-transform:uppercase}
-.hero h1{font-size:clamp(39px,5.3vw,69px);line-height:1.08;letter-spacing:-2px;margin:24px 0}
-.hero h1 span{color:#65c4ff}
-.hero p{font-size:18px;color:#d4e8ff;line-height:1.8;max-width:620px}
-.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-.hero-stats{display:flex;flex-wrap:wrap;gap:25px;margin-top:50px}
-.hero-stats div{border-left:2px solid #38aaff;padding-left:14px}
-.hero-stats strong{display:block;font-size:22px;color:white}
-.hero-stats small{color:#bdd6f3}
-.visual{min-height:410px;display:flex;align-items:end;justify-content:center;position:relative}
-.halo{
- position:absolute;width:400px;height:400px;bottom:0;
- border-radius:50%;background:#31a7ff28;filter:blur(48px)
-}
-.machine{
- position:relative;width:160px;height:350px;
- background:linear-gradient(100deg,#111c2a,#29394b 30%,#101923 85%);
- border:4px solid #35475b;border-radius:9px 9px 4px 4px;
- box-shadow:18px 15px 35px #0008,inset 5px 0 8px #ffffff14;
- z-index:2
-}
-.machine:before{
- content:"";position:absolute;left:12px;right:12px;top:14px;height:38px;
- background:#17283a;border:2px solid #43556b;border-radius:4px
-}
-.machine:after{
- content:"";position:absolute;left:18px;right:18px;top:72px;bottom:18px;
- background:repeating-linear-gradient(to bottom,#0b121a 0 9px,#354251 10px 12px,#121d28 13px 26px);
- border:2px solid #26394b
-}
-.machine .screen{
- position:absolute;top:23px;left:58px;width:39px;height:18px;
- background:#007fe7;box-shadow:0 0 16px #00aaffaa;z-index:3;border-radius:2px
-}
-.machine .light{
- position:absolute;bottom:28px;right:25px;width:7px;height:7px;
- background:#23e488;border-radius:50%;z-index:3;box-shadow:0 0 8px #23e488
-}
-.machine.side{height:290px;width:125px;transform:translate(28px,0) scale(.94);z-index:1}
-.machine.right{height:315px;width:135px;transform:translate(-25px,0) scale(.96);z-index:3}
-.section{padding:90px 0}
-.section.alt{background:var(--light)}
-.section.dark{background:linear-gradient(125deg,#031c40,#064a99);color:white}
-.section-head{margin-bottom:36px}
-.section-head h2{font-size:clamp(30px,4vw,44px);line-height:1.15;margin:12px 0}
-.section-head p{color:var(--muted);line-height:1.7;max-width:700px}
-.dark .section-head p{color:#c8ddf6}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
-.product{
- background:white;border-radius:12px;overflow:hidden;
- box-shadow:0 10px 35px #0b3c7710;
- border:1px solid #dbe7f5;display:flex;flex-direction:column;
- transition:.2s
-}
-.product:hover{transform:translateY(-5px);box-shadow:0 16px 35px #0b3c7722}
-.product-art{
- height:190px;display:flex;align-items:center;justify-content:center;
- background:radial-gradient(circle at 50% 70%,#d0eaff,#eaf3fc 60%,#cddff3);
- position:relative;overflow:hidden
-}
-.product-art:before{
- content:"";position:absolute;inset:0;
- background:repeating-linear-gradient(90deg,transparent 0 45px,#ffffff8c 46px 48px,transparent 49px 95px)
-}
-.mini-ups{
- width:88px;height:143px;border-radius:5px;
- background:linear-gradient(95deg,#0a1420,#28394a 35%,#111d29);
- border:3px solid #384b60;position:relative;z-index:2;
- box-shadow:12px 12px 20px #173d6d55
-}
-.mini-ups:before{
- content:"";position:absolute;left:14px;right:14px;top:13px;height:22px;
- background:#0777d1;border:5px solid #1d2d3c;border-radius:3px
-}
-.mini-ups:after{
- content:"";position:absolute;left:12px;right:12px;top:47px;bottom:10px;
- background:repeating-linear-gradient(0deg,#101b27 0 8px,#4b5a67 9px 10px)
-}
-.mini-ups.double{box-shadow:42px 9px 0 -10px #1c2b3b,12px 12px 20px #173d6d55}
-.battery{
- width:155px;height:94px;border:3px solid #34465b;border-radius:6px;
- background:linear-gradient(120deg,#101d2d,#293d51,#101a28);
- position:relative;z-index:2;box-shadow:12px 13px 20px #173d6d55
-}
-.battery:before{
- content:"";position:absolute;left:14px;top:16px;width:48px;height:26px;
- background:#0b80dc;border:4px solid #1b2a3b
-}
-.battery:after{
- content:"";position:absolute;right:15px;top:21px;width:44px;height:36px;
- background:repeating-linear-gradient(0deg,#28394b 0 5px,#63748a 6px 7px)
-}
-.battery.tall{height:145px;width:118px}
-.product-body{padding:25px;display:flex;flex:1;flex-direction:column}
-.product-body h3{font-size:21px;margin:0 0 12px;color:#073a7b}
-.product-body p{font-size:14px;line-height:1.7;color:#61738a;flex:1}
-.product .btn{align-self:flex-start;margin-top:14px}
-.tag{font-size:11px;font-weight:800;color:#0675d5;letter-spacing:1px;margin-bottom:12px}
-.benefit{background:white;border-radius:10px;padding:28px;border:1px solid #dce7f5}
-.benefit .number{font-size:36px;color:#0878e9;font-weight:900}
-.benefit h3{font-size:20px;margin:16px 0 10px}
-.benefit p{color:#64758b;line-height:1.7;font-size:14px}
-.tech{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
-.tech-panel{
- background:#ffffff0f;border:1px solid #ffffff35;border-radius:14px;padding:30px
-}
-.tech-row{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid #ffffff2b}
-.tech-row:last-child{border:0}
-.tech-icon{font-size:28px;color:#75d0ff}
-.tech-row strong{display:block;margin-bottom:7px}
-.tech-row p{margin:0;color:#c4dbf7;font-size:14px;line-height:1.6}
-.service{padding:26px;border-radius:10px;background:white;border:1px solid #dce7f5}
-.service b{font-size:28px;color:#0b7ae5}
-.service h3{font-size:19px}
-.service p{color:#667a91;line-height:1.7}
-.cta{
- background:linear-gradient(115deg,#04244e,#0663c2);
- padding:75px 0;color:white;text-align:center
-}
-.cta h2{font-size:clamp(30px,4vw,45px);margin:0 0 18px}
-.cta p{color:#cfe6ff;line-height:1.7}
-footer{background:#03172f;color:#a9c2de;padding:45px 0}
-footer a{color:#8bc9ff}
-.footer-inner{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}
-.footer-inner p{font-size:13px;line-height:1.7}
-@media(max-width:900px){
- .hero-inner{grid-template-columns:1fr;padding:70px 0}
- .visual{min-height:330px}
- .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
- .tech{grid-template-columns:1fr}
- nav{gap:14px}
-}
-@media(max-width:600px){
- .navbar{padding:15px 0;align-items:flex-start;flex-direction:column}
- nav{gap:12px}
- .hero h1{letter-spacing:-1px}
- .hero-stats{gap:15px}
- .grid{grid-template-columns:1fr}
- .section{padding:60px 0}
- .visual{transform:scale(.82);margin:-25px 0}
+
 .logo {
+  color: white;
   font-size: 23px;
-  letter-spacing: 0;
-  line-height: 1.25;
-  max-width: 340px;
+  line-height: 1.2;
+  font-weight: 900;
+  max-width: 355px;
 }
 
 .logo small {
-  margin-top: 6px;
+  display: block;
+  color: #9bcaff;
   font-size: 9px;
+  font-weight: normal;
   letter-spacing: 1.2px;
+  margin-top: 7px;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #e0edff;
+  font-size: 14px;
+}
+
+nav a:hover { color: var(--cyan); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 23px;
+  border-radius: 6px;
+  background: var(--bright);
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+  border: 1px solid transparent;
+  transition: .2s;
+}
+
+.btn:hover {
+  background: #0065d1;
+  transform: translateY(-2px);
+}
+
+.btn.outline {
+  background: transparent;
+  border-color: #a2ceff;
+  color: white;
+}
+
+.btn.white {
+  background: white;
+  color: #064a9b;
+}
+
+.btn.small { padding: 11px 16px; }
+
+/* ГЛАВНЫЙ ЭКРАН С ВИДЕО */
+
 .hero {
-  min-height: 680px;
   position: relative;
+  min-height: 690px;
   overflow: hidden;
-  background: #031b40;
+  background: linear-gradient(120deg,#031936,#06468e);
+  color: white;
+  display: flex;
+  align-items: center;
 }
 
 .hero-video {
@@ -231,303 +142,871 @@ footer a{color:#8bc9ff}
 .hero-overlay {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: linear-gradient(
     90deg,
     rgba(2,18,43,.94) 0%,
-    rgba(3,35,77,.75) 55%,
-    rgba(3,36,80,.35) 100%
+    rgba(3,35,77,.78) 55%,
+    rgba(3,36,80,.42) 100%
   );
-  z-index: 1;
 }
 
 .hero-inner {
   position: relative;
   z-index: 3;
+  padding: 105px 0;
 }
 
-.hero-inner > div:first-child {
-  max-width: 850px;
+.hero-content { max-width: 850px; }
+
+.kicker {
+  color: var(--cyan);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: clamp(38px,5.3vw,68px);
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  margin: 25px 0;
+}
+
+.hero h1 span { color: #70caff; }
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #e0eeff;
+  max-width: 690px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 30px;
+}
+
+.hero-tags {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 55px;
+}
+
+.hero-tags div {
+  padding-left: 15px;
+  border-left: 2px solid #4db8ff;
+}
+
+.hero-tags strong {
+  display: block;
+  font-size: 18px;
+}
+
+.hero-tags small {
+  color: #c4dcf7;
+  font-size: 12px;
+}
+
+/* ОБЩИЕ СЕКЦИИ */
+
+.section { padding: 90px 0; }
+
+.section.alt { background: var(--light); }
+
+.section.dark {
+  background: linear-gradient(125deg,#031c40,#064b9c);
+  color: white;
+}
+
+.section-head { margin-bottom: 38px; }
+
+.section-head h2 {
+  font-size: clamp(30px,4vw,44px);
+  line-height: 1.15;
+  margin: 13px 0;
+}
+
+.section-head p {
+  color: var(--muted);
+  max-width: 730px;
+  line-height: 1.8;
+}
+
+.dark .section-head p { color: #c9dff8; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 23px;
+}
+
+/* КАТАЛОГ */
+
+.product {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #dbe7f5;
+  box-shadow: 0 10px 30px #0b3c7710;
+  display: flex;
+  flex-direction: column;
+  transition: .2s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 38px #0b3c7725;
+}
+
+.product-art {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(
+    circle at 50% 70%,
+    #d1eaff,#eaf3fc 65%,#d0e0f1
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.product-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0 48px,
+    #ffffff85 49px 51px,
+    transparent 52px 100px
+  );
+}
+
+.mini-ups {
+  width: 90px;
+  height: 145px;
+  background: linear-gradient(
+    95deg,#0a1420,#293b4d 35%,#111d29
+  );
+  border: 3px solid #384b60;
+  border-radius: 5px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 12px 12px 22px #173d6d55;
+}
+
+.mini-ups::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  top: 13px;
+  height: 23px;
+  background: #0878d2;
+  border: 5px solid #1d2d3c;
+  border-radius: 3px;
+}
+
+.mini-ups::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  top: 49px;
+  bottom: 10px;
+  background: repeating-linear-gradient(
+    0deg,#101b27 0 8px,#4b5a67 9px 10px
+  );
+}
+
+.mini-ups.double {
+  box-shadow:
+    43px 8px 0 -10px #1c2b3b,
+    12px 12px 22px #173d6d55;
+}
+
+.battery {
+  width: 155px;
+  height: 95px;
+  border: 3px solid #34465b;
+  border-radius: 6px;
+  background: linear-gradient(
+    120deg,#101d2d,#293d51,#101a28
+  );
+  position: relative;
+  z-index: 2;
+  box-shadow: 12px 13px 20px #173d6d55;
+}
+
+.battery::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 16px;
+  width: 48px;
+  height: 26px;
+  background: #0b80dc;
+  border: 4px solid #1b2a3b;
+}
+
+.battery::after {
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 21px;
+  width: 44px;
+  height: 36px;
+  background: repeating-linear-gradient(
+    0deg,#28394b 0 5px,#63748a 6px 7px
+  );
+}
+
+.battery.tall {
+  height: 145px;
+  width: 118px;
+}
+
+.product-body {
+  padding: 26px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.tag {
+  color: #0875d5;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 13px;
+}
+
+.product-body h3 {
+  font-size: 21px;
+  color: #073b7b;
+  margin: 0 0 13px;
+}
+
+.product-body p {
+  font-size: 14px;
+  line-height: 1.75;
+  color: #61738a;
+  flex: 1;
+}
+
+.product .btn {
+  align-self: flex-start;
+  margin-top: 15px;
+}
+
+/* ПРЕИМУЩЕСТВА */
+
+.benefit {
+  background: white;
+  border-radius: 11px;
+  padding: 30px;
+  border: 1px solid #dce7f5;
+}
+
+.benefit .number {
+  font-size: 38px;
+  font-weight: 900;
+  color: #0878e9;
+}
+
+.benefit h3 {
+  font-size: 20px;
+  margin: 18px 0 10px;
+}
+
+.benefit p {
+  font-size: 14px;
+  color: #64758b;
+  line-height: 1.8;
+}
+
+/* ТЕХНОЛОГИИ */
+
+.tech {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.tech-panel {
+  background: #ffffff0f;
+  border: 1px solid #ffffff35;
+  border-radius: 14px;
+  padding: 30px;
+}
+
+.tech-row {
+  display: flex;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid #ffffff2b;
+}
+
+.tech-row:last-child { border: 0; }
+
+.tech-icon {
+  font-size: 27px;
+  color: #75d0ff;
+}
+
+.tech-row strong {
+  display: block;
+  margin-bottom: 7px;
+}
+
+.tech-row p {
+  margin: 0;
+  color: #c4dbf7;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* УСЛУГИ */
+
+.service {
+  padding: 28px;
+  border-radius: 11px;
+  background: white;
+  border: 1px solid #dce7f5;
+}
+
+.service b {
+  font-size: 30px;
+  color: #0b7ae5;
+}
+
+.service h3 { font-size: 20px; }
+
+.service p {
+  color: #667a91;
+  line-height: 1.8;
+}
+
+/* ЗАЯВКА */
+
+.cta {
+  background: linear-gradient(115deg,#04244e,#0663c2);
+  padding: 80px 0;
+  color: white;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: clamp(30px,4vw,45px);
+  margin: 15px 0;
+}
+
+.cta p {
+  color: #cfe6ff;
+  line-height: 1.8;
+}
+
+/* ПОДВАЛ */
+
+footer {
+  background: #03172f;
+  color: #a9c2de;
+  padding: 50px 0;
+}
+
+footer a { color: #8bc9ff; }
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-inner p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* АДАПТАЦИЯ */
+
+@media(max-width:900px) {
+  .grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+  .tech { grid-template-columns: 1fr; }
+  nav { gap: 14px; }
 }
 
 @media(max-width:600px) {
-  .logo { font-size: 19px; }
-  .hero { min-height: 620px; }
-  .hero-overlay {
-    background: rgba(2,22,49,.78);
+  .navbar {
+    padding: 17px 0;
+    align-items: flex-start;
+    flex-direction: column;
   }
+  .logo { font-size: 19px; }
+  nav { gap: 12px; }
+  .hero { min-height: 620px; }
+  .hero-overlay { background: rgba(2,22,49,.8); }
+  .hero-inner { padding: 75px 0; }
+  .hero h1 { letter-spacing: -1px; }
+  .hero-tags { gap: 17px; }
+  .grid { grid-template-columns: 1fr; }
+  .section { padding: 60px 0; }
 }
 
-
-Замените содержимое первого экрана
-Найдите в коде весь блок от <section class="hero"> до соответствующего </section> и замените его следующим:
-<section class="hero">
-
-  <video
-    class="hero-video"
-    autoplay
-    muted
-    loop
-    playsinline
-    preload="metadata"
-    aria-hidden="true"
-  >
-    <source src="industrial.mp4" type="video/mp4">
-  </video>
-
-  <div class="hero-overlay"></div>
-
-  <div class="container hero-inner">
-    <div>
-      <div class="kicker">
-        ПРОМЫШЛЕННЫЕ СИСТЕМЫ БЕСПЕРЕБОЙНОГО ПИТАНИЯ
-      </div>
-
-      <h1>
-        НАДЁЖНОЕ ЭЛЕКТРОПИТАНИЕ
-        <span>КРИТИЧЕСКИ ВАЖНЫХ ОБЪЕКТОВ</span>
-      </h1>
-
-      <p>
-        Источники бесперебойного питания и
-        аккумуляторные системы LiFePO4
-        для промышленных предприятий,
-        нефтегазовой отрасли,
-        центров обработки данных
-        и транспортной инфраструктуры.
-      </p>
-
-      <div class="actions">
-        <a class="btn" href="#catalog">
-          Каталог оборудования →
-        </a>
-
-        <a class="btn outline" href="zayavka.html">
-          Получить предложение
-        </a>
-      </div>
-    </div>
-  </div>
-
-</section>
+@media(prefers-reduced-motion:reduce) {
+  html { scroll-behavior: auto; }
+  .btn,.product { transition: none; }
+}
 </style>
 </head>
+
 <body>
 
 <header>
- <div class="container navbar">
-  <a class="logo" href="index.html">
- Системы бесперебойного питания
- <small>НАДЁЖНОЕ ЭЛЕКТРОПИТАНИЕ ПРОМЫШЛЕННЫХ ОБЪЕКТОВ</small>
+<div class="container navbar">
+
+<a class="logo" href="index.html">
+  Системы бесперебойного питания
+  <small>
+    НАДЁЖНОЕ ЭЛЕКТРОПИТАНИЕ ПРОМЫШЛЕННЫХ ОБЪЕКТОВ
+  </small>
 </a>
-  <nav>
-   <a href="#catalog">Оборудование</a>
-   <a href="#advantages">Преимущества</a>
-   <a href="#technology">Технологии</a>
-   <a href="#services">Услуги</a>
-   <a class="btn small" href="zayavka.html">Оставить заявку</a>
-  </nav>
- </div>
+
+<nav>
+  <a href="#catalog">Оборудование</a>
+  <a href="#advantages">Преимущества</a>
+  <a href="#technology">Технологии</a>
+  <a href="#services">Услуги</a>
+  <a class="btn small" href="zayavka.html">
+    Оставить заявку
+  </a>
+</nav>
+
+</div>
 </header>
 
 <main>
+
+<!-- ГЛАВНЫЙ ЭКРАН -->
+
 <section class="hero">
- <div class="container hero-inner">
+
+<video
+  id="heroVideo"
+  class="hero-video"
+  autoplay
+  muted
+  loop
+  playsinline
+  preload="metadata"
+  aria-hidden="true"
+>
+  <source src="industrial.mp4" type="video/mp4">
+</video>
+
+<div class="hero-overlay"></div>
+
+<div class="container hero-inner">
+<div class="hero-content">
+
+<div class="kicker">
+  ПРОМЫШЛЕННЫЕ СИСТЕМЫ БЕСПЕРЕБОЙНОГО ПИТАНИЯ
+</div>
+
+<h1>
+  НАДЁЖНОЕ ЭЛЕКТРОПИТАНИЕ
+  <span>КРИТИЧЕСКИ ВАЖНЫХ ОБЪЕКТОВ</span>
+</h1>
+
+<p>
+  Источники бесперебойного питания и
+  аккумуляторные системы LiFePO4
+  для промышленных предприятий,
+  нефтегазовой отрасли,
+  центров обработки данных
+  и транспортной инфраструктуры.
+</p>
+
+<div class="actions">
+  <a class="btn" href="#catalog">
+    Каталог оборудования →
+  </a>
+  <a class="btn outline" href="zayavka.html">
+    Получить предложение
+  </a>
+</div>
+
+<div class="hero-tags">
   <div>
-   <div class="kicker">НАДЁЖНОСТЬ • ТЕХНОЛОГИИ • ЭНЕРГИЯ</div>
-   <h1>ПРОМЫШЛЕННЫЕ <span>ИБП</span> И СИСТЕМЫ РЕЗЕРВНОГО ПИТАНИЯ</h1>
-   <p>Подбор источников бесперебойного питания и аккумуляторных систем LiFePO4 для предприятий, инженерной инфраструктуры и ответственных потребителей.</p>
-   <div class="actions">
-    <a class="btn" href="#catalog">Смотреть оборудование →</a>
-    <a class="btn outline" href="zayavka.html">Получить предложение</a>
-   </div>
-   <div class="hero-stats">
-    <div><strong>ИБП</strong><small>Разные конфигурации</small></div>
-    <div><strong>LiFePO4</strong><small>Современные АКБ</small></div>
-    <div><strong>Подбор</strong><small>По параметрам объекта</small></div>
-   </div>
+    <strong>Промышленность</strong>
+    <small>Заводы и производство</small>
   </div>
-  <div class="visual" aria-label="Стилизованное изображение промышленных ИБП">
-   <div class="halo"></div>
-   <div class="machine side"><i class="screen"></i></div>
-   <div class="machine"><i class="screen"></i><i class="light"></i></div>
-   <div class="machine right"><i class="screen"></i><i class="light"></i></div>
+  <div>
+    <strong>Нефтегазовая отрасль</strong>
+    <small>НПЗ и инфраструктура</small>
   </div>
- </div>
+  <div>
+    <strong>ЦОД</strong>
+    <small>Серверные и дата-центры</small>
+  </div>
+  <div>
+    <strong>Транспорт</strong>
+    <small>Железнодорожные объекты</small>
+  </div>
+</div>
+
+</div>
+</div>
 </section>
+
+<!-- КАТАЛОГ -->
 
 <section class="section" id="catalog">
- <div class="container">
-  <div class="section-head">
-   <div class="kicker">ОБОРУДОВАНИЕ</div>
-   <h2>Каталог решений</h2>
-   <p>Источники бесперебойного питания и аккумуляторные батареи для промышленных объектов. Подбираем конфигурацию по техническому заданию.</p>
+<div class="container">
+
+<div class="section-head">
+  <div class="kicker">ОБОРУДОВАНИЕ</div>
+  <h2>Каталог решений</h2>
+  <p>
+    Источники бесперебойного питания и
+    аккумуляторные системы для промышленных объектов.
+    Подбор оборудования по техническому заданию.
+  </p>
+</div>
+
+<div class="grid">
+
+<article class="product">
+  <div class="product-art">
+    <div class="mini-ups double"></div>
   </div>
-  <div class="grid">
-
-   <article class="product">
-    <div class="product-art"><div class="mini-ups double"></div></div>
-    <div class="product-body">
-     <div class="tag">КОМПЛЕКСНЫЕ РЕШЕНИЯ</div>
-     <h3>ИБП с аккумуляторными батареями</h3>
-     <p>Готовые конфигурации резервного питания с заданным временем автономной работы.</p>
-     <a class="btn" href="zayavka.html?equipment=ups-with">Оставить заявку →</a>
-    </div>
-   </article>
-
-   <article class="product">
-    <div class="product-art"><div class="mini-ups"></div></div>
-    <div class="product-body">
-     <div class="tag">ИСТОЧНИКИ ПИТАНИЯ</div>
-     <h3>ИБП без АКБ</h3>
-     <p>Источники бесперебойного питания для подключения внешних аккумуляторных систем.</p>
-     <a class="btn" href="zayavka.html?equipment=ups-without">Оставить заявку →</a>
-    </div>
-   </article>
-
-   <article class="product">
-    <div class="product-art"><div class="battery"></div></div>
-    <div class="product-body">
-     <div class="tag">НИЗКОВОЛЬТНЫЕ АКБ</div>
-     <h3>LiFePO4 АКБ 48В</h3>
-     <p>Литий-железо-фосфатные аккумуляторы для совместимых систем резервного питания.</p>
-     <a class="btn" href="zayavka.html?equipment=lfp48">Оставить заявку →</a>
-    </div>
-   </article>
-
-   <article class="product">
-    <div class="product-art"><div class="battery tall"></div></div>
-    <div class="product-body">
-     <div class="tag">ВЫСОКОВОЛЬТНЫЕ АКБ</div>
-     <h3>LiFePO4 АКБ 192В–240В</h3>
-     <p>Аккумуляторные решения для совместимых промышленных ИБП.</p>
-     <a class="btn" href="zayavka.html?equipment=lfp192">Оставить заявку →</a>
-    </div>
-   </article>
-
-   <article class="product">
-    <div class="product-art"><div class="battery tall"></div></div>
-    <div class="product-body">
-     <div class="tag">ВЫСОКОВОЛЬТНЫЕ АКБ</div>
-     <h3>LiFePO4 АКБ 384В–614,4В</h3>
-     <p>Аккумуляторные системы для мощных промышленных комплексов бесперебойного питания.</p>
-     <a class="btn" href="zayavka.html?equipment=lfp384">Оставить заявку →</a>
-    </div>
-   </article>
-
+  <div class="product-body">
+    <div class="tag">КОМПЛЕКСНЫЕ РЕШЕНИЯ</div>
+    <h3>ИБП с аккумуляторными батареями</h3>
+    <p>
+      Комплексные системы резервного питания
+      с необходимым временем автономной работы.
+    </p>
+    <a class="btn" href="zayavka.html?equipment=ups-with">
+      Оставить заявку →
+    </a>
   </div>
- </div>
+</article>
+
+<article class="product">
+  <div class="product-art">
+    <div class="mini-ups"></div>
+  </div>
+  <div class="product-body">
+    <div class="tag">ИСТОЧНИКИ ПИТАНИЯ</div>
+    <h3>ИБП без АКБ</h3>
+    <p>
+      Источники бесперебойного питания
+      для подключения внешних аккумуляторных систем.
+    </p>
+    <a class="btn" href="zayavka.html?equipment=ups-without">
+      Оставить заявку →
+    </a>
+  </div>
+</article>
+
+<article class="product">
+  <div class="product-art">
+    <div class="battery"></div>
+  </div>
+  <div class="product-body">
+    <div class="tag">НИЗКОВОЛЬТНЫЕ АКБ</div>
+    <h3>LiFePO4 АКБ 48В</h3>
+    <p>
+      Литий-железо-фосфатные аккумуляторы
+      для совместимых систем резервного питания.
+    </p>
+    <a class="btn" href="zayavka.html?equipment=lfp48">
+      Оставить заявку →
+    </a>
+  </div>
+</article>
+
+<article class="product">
+  <div class="product-art">
+    <div class="battery tall"></div>
+  </div>
+  <div class="product-body">
+    <div class="tag">ВЫСОКОВОЛЬТНЫЕ АКБ</div>
+    <h3>LiFePO4 АКБ 192В–240В</h3>
+    <p>
+      Аккумуляторные решения
+      для совместимых промышленных ИБП.
+    </p>
+    <a class="btn" href="zayavka.html?equipment=lfp192">
+      Оставить заявку →
+    </a>
+  </div>
+</article>
+
+<article class="product">
+  <div class="product-art">
+    <div class="battery tall"></div>
+  </div>
+  <div class="product-body">
+    <div class="tag">ВЫСОКОВОЛЬТНЫЕ АКБ</div>
+    <h3>LiFePO4 АКБ 384В–614,4В</h3>
+    <p>
+      Аккумуляторные системы
+      для мощных промышленных комплексов
+      бесперебойного питания.
+    </p>
+    <a class="btn" href="zayavka.html?equipment=lfp384">
+      Оставить заявку →
+    </a>
+  </div>
+</article>
+
+</div>
+</div>
 </section>
+
+<!-- ПРЕИМУЩЕСТВА -->
 
 <section class="section alt" id="advantages">
- <div class="container">
-  <div class="section-head">
-   <div class="kicker">НАШ ПОДХОД</div>
-   <h2>Преимущества инженерного подбора</h2>
-  </div>
-  <div class="grid">
-   <div class="benefit">
-    <div class="number">01</div>
-    <h3>Точность подбора</h3>
-    <p>Учитываем мощность нагрузки, количество фаз, пусковые токи и требуемую автономию.</p>
-   </div>
-   <div class="benefit">
-    <div class="number">02</div>
-    <h3>Гибкая конфигурация</h3>
-    <p>Рассматриваем напольные и стоечные варианты размещения оборудования.</p>
-   </div>
-   <div class="benefit">
-    <div class="number">03</div>
-    <h3>Современные технологии</h3>
-    <p>Подбираем решения с подходящими аккумуляторными системами, включая LiFePO4.</p>
-   </div>
-  </div>
- </div>
+<div class="container">
+
+<div class="section-head">
+  <div class="kicker">НАШ ПОДХОД</div>
+  <h2>Подбор оборудования под вашу задачу</h2>
+</div>
+
+<div class="grid">
+
+<div class="benefit">
+  <div class="number">01</div>
+  <h3>Точность подбора</h3>
+  <p>
+    Учитываем мощность нагрузки, количество фаз,
+    пусковые токи и требуемое время автономии.
+  </p>
+</div>
+
+<div class="benefit">
+  <div class="number">02</div>
+  <h3>Гибкая конфигурация</h3>
+  <p>
+    Рассматриваем напольные и стоечные
+    варианты размещения оборудования.
+  </p>
+</div>
+
+<div class="benefit">
+  <div class="number">03</div>
+  <h3>Современные технологии</h3>
+  <p>
+    Подбираем решения с подходящими
+    аккумуляторными системами, включая LiFePO4.
+  </p>
+</div>
+
+</div>
+</div>
 </section>
+
+<!-- ТЕХНОЛОГИИ -->
 
 <section class="section dark" id="technology">
- <div class="container tech">
-  <div class="section-head">
-   <div class="kicker">ТЕХНОЛОГИИ</div>
-   <h2>Аккумуляторные системы LiFePO4</h2>
-   <p>Литий-железо-фосфатные аккумуляторы применяются в современных системах накопления энергии и резервного электропитания.</p>
-   <p>При правильном подборе и соблюдении условий эксплуатации технология может обеспечивать длительный ресурс, высокую циклическую стойкость и компактное размещение.</p>
-   <div class="actions">
-    <a class="btn" href="zayavka.html?equipment=lfp48">Подобрать АКБ →</a>
-   </div>
+<div class="container tech">
+
+<div class="section-head">
+  <div class="kicker">ТЕХНОЛОГИИ</div>
+  <h2>Аккумуляторные системы LiFePO4</h2>
+
+  <p>
+    Литий-железо-фосфатные аккумуляторы
+    применяются в современных системах
+    накопления энергии и резервного электропитания.
+  </p>
+
+  <p>
+    При правильном подборе и соблюдении
+    условий эксплуатации технология может
+    обеспечивать длительный ресурс,
+    высокую циклическую стойкость
+    и компактное размещение.
+  </p>
+
+  <div class="actions">
+    <a class="btn" href="zayavka.html?equipment=lfp48">
+      Подобрать АКБ →
+    </a>
   </div>
-  <div class="tech-panel">
-   <div class="tech-row">
-    <div class="tech-icon">⚡</div>
-    <div><strong>Высокая циклическая стойкость</strong><p>Ресурс зависит от режима работы, температуры и характеристик конкретной батареи.</p></div>
-   </div>
-   <div class="tech-row">
-    <div class="tech-icon">▣</div>
-    <div><strong>Компактное размещение</strong><p>Возможность уменьшения занимаемого пространства в подходящих конфигурациях.</p></div>
-   </div>
-   <div class="tech-row">
-    <div class="tech-icon">✓</div>
-    <div><strong>Системы управления BMS</strong><p>Контроль параметров и защитные функции аккумуляторной системы.</p></div>
-   </div>
-   <div class="tech-row">
-    <div class="tech-icon">↗</div>
-    <div><strong>Экономика эксплуатации</strong><p>Оценка стоимости владения с учётом ресурса, обслуживания и условий проекта.</p></div>
-   </div>
+</div>
+
+<div class="tech-panel">
+
+<div class="tech-row">
+  <div class="tech-icon">⚡</div>
+  <div>
+    <strong>Высокая циклическая стойкость</strong>
+    <p>
+      Ресурс зависит от режима работы,
+      температуры и характеристик батареи.
+    </p>
   </div>
- </div>
+</div>
+
+<div class="tech-row">
+  <div class="tech-icon">▣</div>
+  <div>
+    <strong>Компактное размещение</strong>
+    <p>
+      Возможность уменьшения занимаемого
+      пространства в подходящих конфигурациях.
+    </p>
+  </div>
+</div>
+
+<div class="tech-row">
+  <div class="tech-icon">✓</div>
+  <div>
+    <strong>Системы управления BMS</strong>
+    <p>
+      Контроль параметров и защитные функции
+      аккумуляторной системы.
+    </p>
+  </div>
+</div>
+
+<div class="tech-row">
+  <div class="tech-icon">↗</div>
+  <div>
+    <strong>Экономика эксплуатации</strong>
+    <p>
+      Оценка стоимости владения с учётом
+      ресурса, обслуживания и условий проекта.
+    </p>
+  </div>
+</div>
+
+</div>
+</div>
 </section>
+
+<!-- УСЛУГИ -->
 
 <section class="section alt" id="services">
- <div class="container">
-  <div class="section-head">
-   <div class="kicker">ИНЖЕНЕРНЫЕ РЕШЕНИЯ</div>
-   <h2>Подбор оборудования под ваш проект</h2>
-  </div>
-  <div class="grid">
-   <div class="service">
-    <b>01</b><h3>Анализ задачи</h3>
-    <p>Определение требований к мощности, фазности и особенностям нагрузки.</p>
-   </div>
-   <div class="service">
-    <b>02</b><h3>Выбор оборудования</h3>
-    <p>Подбор типа ИБП, аккумуляторной системы и способа установки.</p>
-   </div>
-   <div class="service">
-    <b>03</b><h3>Подготовка предложения</h3>
-    <p>Формирование конфигурации с учётом требований заказчика.</p>
-   </div>
-  </div>
- </div>
+<div class="container">
+
+<div class="section-head">
+  <div class="kicker">ИНЖЕНЕРНЫЕ РЕШЕНИЯ</div>
+  <h2>Подбор оборудования под ваш проект</h2>
+</div>
+
+<div class="grid">
+
+<div class="service">
+  <b>01</b>
+  <h3>Анализ задачи</h3>
+  <p>
+    Определение требований к мощности,
+    фазности и особенностям нагрузки.
+  </p>
+</div>
+
+<div class="service">
+  <b>02</b>
+  <h3>Выбор оборудования</h3>
+  <p>
+    Подбор типа ИБП, аккумуляторной системы
+    и способа установки.
+  </p>
+</div>
+
+<div class="service">
+  <b>03</b>
+  <h3>Подготовка предложения</h3>
+  <p>
+    Формирование конфигурации
+    с учётом требований заказчика.
+  </p>
+</div>
+
+</div>
+</div>
 </section>
 
+<!-- ПРИЗЫВ К ЗАЯВКЕ -->
+
 <section class="cta">
- <div class="container">
-  <div class="kicker">ОСТАВЬТЕ ЗАЯВКУ</div>
-  <h2>Нужно надёжное электропитание?</h2>
-  <p>Укажите технические параметры оборудования. Мы рассмотрим ваш запрос и подготовим предложение.</p>
-  <a class="btn white" href="zayavka.html">Получить коммерческое предложение →</a>
- </div>
+<div class="container">
+
+<div class="kicker">ОСТАВЬТЕ ЗАЯВКУ</div>
+
+<h2>Нужно надёжное электропитание?</h2>
+
+<p>
+  Укажите технические параметры оборудования.
+  Мы рассмотрим ваш запрос и подготовим предложение.
+</p>
+
+<a class="btn white" href="zayavka.html">
+  Получить коммерческое предложение →
+</a>
+
+</div>
 </section>
+
 </main>
 
 <footer>
- <div class="container footer-inner">
-  <div>
-   <div class="logo">ИБП</div>
-   <p>Источники бесперебойного питания<br>и аккумуляторные системы LiFePO4</p>
-  </div>
-  <div>
-   <strong>Навигация</strong>
-   <p><a href="#catalog">Каталог</a></p>
-   <p><a href="#advantages">Преимущества</a></p>
-   <p><a href="zayavka.html">Оставить заявку</a></p>
-  </div>
-  <div>
-   <strong>Контакты</strong>
-   <p><a href="mailto:jekkasova96@yandex.ru">jekkasova96@yandex.ru</a></p>
-   <p>© 2026 ИБП</p>
-  </div>
- </div>
+<div class="container footer-inner">
+
+<div>
+  <strong>Системы бесперебойного питания</strong>
+  <p>
+    Промышленные ИБП<br>
+    и аккумуляторные системы LiFePO4
+  </p>
+</div>
+
+<div>
+  <strong>Навигация</strong>
+  <p><a href="#catalog">Каталог</a></p>
+  <p><a href="#advantages">Преимущества</a></p>
+  <p><a href="zayavka.html">Оставить заявку</a></p>
+</div>
+
+<div>
+  <strong>Контакты</strong>
+  <p>
+    <a href="mailto:jekkasova96@yandex.ru">
+      jekkasova96@yandex.ru
+    </a>
+  </p>
+  <p>© 2026 Системы бесперебойного питания</p>
+</div>
+
+</div>
 </footer>
+
+<script>
+const video = document.getElementById("heroVideo");
+
+if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  video.pause();
+} else {
+  video.play().catch(() => {
+    // Если браузер блокирует воспроизведение,
+    // остаётся виден фоновый синий градиент.
+  });
+}
+</script>
 
 </body>
 </html>
